@@ -22,12 +22,12 @@ class App extends Component<AppProps, AppState> {
       <div>
         <EntreDeuxDate date1={moment()} date2={moment().add(10, 'days')} />
         <div className="colonne">
-         {moment().format('MMMM Do YYYY, h:mm:ss a')}
-{moment().format('dddd')}  
-{moment().format("MMM Do YY")}            
-{moment().format('YYYY [escaped] YYYY')}   
-{moment().format()}                        
-                                           
+          {moment().format('MMMM Do YYYY, h:mm:ss a')}
+          {moment().format('dddd')}
+          {moment().format("MMM Do YY")}
+          {moment().format('YYYY [escaped] YYYY')}
+          {moment().format()}
+
         </div>
       </div>
     );
