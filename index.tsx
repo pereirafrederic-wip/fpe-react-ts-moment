@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Hello from './Hello';
+import EntreDeuxDate from './EntreDeuxDate';
+import moment from 'moment'
 import './style.css';
 
 interface AppProps { }
 interface AppState {
   name: string;
 }
-
+//https://momentjs.com/
 class App extends Component<AppProps, AppState> {
   constructor(props) {
     super(props);
@@ -19,10 +20,15 @@ class App extends Component<AppProps, AppState> {
   render() {
     return (
       <div>
-        <Hello name={this.state.name} />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
+        <EntreDeuxDate date1={moment()} date2={moment().add(10, 'days')} />
+        <div className="colonne">
+         {moment().format('MMMM Do YYYY, h:mm:ss a')}
+{moment().format('dddd')}  
+{moment().format("MMM Do YY")}            
+{moment().format('YYYY [escaped] YYYY')}   
+{moment().format()}                        
+                                           
+        </div>
       </div>
     );
   }
