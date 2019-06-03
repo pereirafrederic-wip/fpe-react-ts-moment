@@ -18,6 +18,8 @@ class App extends Component<AppProps, AppState> {
   }
 
   render() {
+    moment.locale('fr')
+    
     return (
       <div>
         <EntreDeuxDate date1={moment()} date2={moment().add(10, 'days')} />
